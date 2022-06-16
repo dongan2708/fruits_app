@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ShoppingCartFragment"
+    android:paddingTop="0dp">
+
+    <TextView android:id="@+id/list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Order"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="15dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_list_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_text"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/cart_item" />
+
+    <LinearLayout
+        android:id="@+id/total_check"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/con_shopping_cart">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="Total: "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/check_out_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="@string/check_out"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/con_shopping_cart"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:gravity="center_vertical"
+        android:paddingLeft="120dp"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="Continue Shopping"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>
