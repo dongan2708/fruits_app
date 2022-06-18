@@ -17,8 +17,10 @@ import android.widget.FrameLayout;
 
 import com.android.appfruit.activity.LoginActivity;
 import com.android.appfruit.activity.WelcomeActivity;
+import com.android.appfruit.adapter.HistoryDetailsAdapter;
 import com.android.appfruit.fragment.CategoryFragment;
 import com.android.appfruit.fragment.CheckOutFragment;
+import com.android.appfruit.fragment.DetailsHistoryFragment;
 import com.android.appfruit.fragment.LogoutFragment;
 import com.android.appfruit.fragment.MyHomeFragment;
 import com.android.appfruit.fragment.OrderHistoryFragment;
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity
     public static CheckOutFragment checkOutFragment;
     public static LogoutFragment logoutFragment;
     public static OrderHistoryFragment orderHistoryFragment;
+    public static DetailsHistoryFragment detailsHistoryFragment;
     public static String accessToken;
 
     @Override
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity
         myProfileFragment = new ProfileFragment();
         logoutFragment = new LogoutFragment();
         orderHistoryFragment = new OrderHistoryFragment();
+        detailsHistoryFragment = new DetailsHistoryFragment();
         checkOutFragment = new CheckOutFragment();
         // chạy fragment default
         getSupportFragmentManager()
@@ -156,16 +160,4 @@ public class MainActivity extends AppCompatActivity
         }
         return false;
     }
-//    public void Welcome(View view) {
-//        startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
-//    }
-////    @Override
-////    protected void onStart() {
-////        super.onStart();
-//////        FirebaseUser user = mAuth.getCurrentUser();
-//////        if(user == null)
-////        {
-////            startActivity(new Intent(MainActivity.this, LoginActivity.class));
-////        }
-////    }
 }

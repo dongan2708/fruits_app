@@ -30,6 +30,10 @@ public class HistoryDetailsAdapter extends RecyclerView.Adapter<HistoryDetailsAd
         this.cartItems = cartItemList;
         this.mContext = context;
     }
+    public void setOrderDetails(List<CartItem> orderDetails){
+
+        this.cartItems = orderDetails;
+    }
     @NonNull
     @Override
     public HistoryDetailsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

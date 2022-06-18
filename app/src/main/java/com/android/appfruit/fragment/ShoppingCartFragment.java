@@ -83,7 +83,7 @@ public class ShoppingCartFragment extends Fragment {
         currentContext = container.getContext();
         view = inflater.inflate(R.layout.fragment_cart, container,false);
         instance = this;
-
+        cartPrice = view.findViewById(R.id.total_price);
         Button conShoppingCart = view.findViewById(R.id.con_shopping_cart);
         Button checkOutCart = view.findViewById(R.id.check_out_cart);
 

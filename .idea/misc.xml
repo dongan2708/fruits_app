@@ -4,6 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/GITHUB/app_fruits_android/AppFruit-main/app/src/main/res/layout/fruits_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/activity_welcome.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/cart_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/categories_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_cart.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_check_out.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_history.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_history_details.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_ordershistory.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fragment_product.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/fruits_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/history_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/GITHUB/fruits_app/app/src/main/res/layout/item_order_history.xml" value="0.17552083333333332" />
         <entry key="..\:/SEM4_Android/App Fruit/AppFruit-main/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
         <entry key="..\:/SEM4_Android/App Fruit/AppFruit-main/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
         <entry key="..\:/SEM4_Android/App Fruit/AppFruit-main/app/src/main/res/layout/categories_item.xml" value="0.17552083333333332" />

@@ -77,7 +77,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             return new ViewHolder(view);
         }
     }
-
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         if(holder.getItemViewType() == VIEW_TYPE_ITEM){

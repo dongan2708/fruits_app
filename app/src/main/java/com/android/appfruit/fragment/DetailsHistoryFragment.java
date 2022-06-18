@@ -1,7 +1,6 @@
 package com.android.appfruit.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -9,24 +8,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.appfruit.R;
-import com.android.appfruit.activity.LoginActivity;
-import com.android.appfruit.adapter.OrderHistoryAdapter;
-import com.android.appfruit.entity.Account;
+import com.android.appfruit.adapter.HistoryDetailsAdapter;
 import com.android.appfruit.entity.CartItem;
 import com.android.appfruit.entity.ShoppingCart;
 import com.android.appfruit.service.HistoryService;
-import com.android.appfruit.service.MyProfileService;
 import com.android.appfruit.util.RetrofitGenerator;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Response;
@@ -34,18 +29,22 @@ import retrofit2.Response;
 public class DetailsHistoryFragment extends Fragment {
     private HistoryService historyService;
     private RecyclerView recyclerView;
+    private int currentHistoryId = 0;
     private String token = null;
     private View view;
     private Context currentContext;
-    List<ShoppingCart> cartItems;
+    private List<CartItem> cartItems;
+    List<ShoppingCart> shoppingCarts;
+    private HistoryDetailsAdapter historyDetailsAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_history, container, false);
+        view = inflater.inflate(R.layout.fragment_history_details, container, false);
         config();
         initData();
         initView();
+        setFirstData();
         return view;
     }
     private void initView() {
@@ -54,19 +53,21 @@ public class DetailsHistoryFragment extends Fragment {
         // set layout default
         recyclerView.setLayoutManager(new LinearLayoutManager(currentContext));
         // set adapter kèm dữ liệu
-//        recyclerView.setAdapter(new DetailsHistoryFragment(currentContext, cartItems));
+        historyDetailsAdapter = new HistoryDetailsAdapter(currentContext);
+        recyclerView.setAdapter(historyDetailsAdapter);
     }
-    private void initData() {
+    private List<CartItem> initData() {
         try {
             Response<List<ShoppingCart>> OrderDetailsResponse = historyService.getAll().execute();
             // trường hợp thành công.
             if (OrderDetailsResponse.isSuccessful()) {
-                cartItems = OrderDetailsResponse.body();
+                shoppingCarts = OrderDetailsResponse.body();
             }
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("", e.getMessage());
         }
+        return new ArrayList<>();
     }
     private void config(){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -79,5 +80,14 @@ public class DetailsHistoryFragment extends Fragment {
         if (historyService == null) {
             historyService = RetrofitGenerator.createService(HistoryService.class,token);
         }
+    }
+    private void setFirstData(){
+        cartItems = initData();
+        historyDetailsAdapter.setOrderDetails(cartItems);
+
+    }
+
+    public void setCurrentHistoryId(int currentHistoryId) {
+        this.currentHistoryId = currentHistoryId;
     }
 }

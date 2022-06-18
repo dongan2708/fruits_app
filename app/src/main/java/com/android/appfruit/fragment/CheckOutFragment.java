@@ -2,6 +2,7 @@ package com.android.appfruit.fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.StrictMode;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +60,21 @@ public class CheckOutFragment extends Fragment {
                 String phone = etPhone.getText().toString();
                 String note = etNote.getText().toString();
 
+                if (TextUtils.isEmpty(name)) {
+                    etName.setError("Please Enter Name");
+                    etName.requestFocus();
+                }
+                if (TextUtils.isEmpty(name)) {
+                    etAddress.setError("Please Enter Address");
+                    etAddress.requestFocus();
+                }if (TextUtils.isEmpty(name)) {
+                    etPhone.setError("Please Enter Phone");
+                    etPhone.requestFocus();
+                }if (TextUtils.isEmpty(name)) {
+                    etNote.setError("Please Enter Note");
+                    etNote.requestFocus();
+                }
+
                 CheckOutDto checkOutDto = new CheckOutDto();
                 checkOutDto.setShipName(name);
                 checkOutDto.setShipAddress(address);
@@ -73,12 +90,9 @@ public class CheckOutFragment extends Fragment {
 
             }
         });
-
         config();
-
         return view;
     }
-
     private void config() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);

@@ -2,9 +2,10 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="@dimen/margin_10dp"
+    app:cardCornerRadius="@dimen/margin_20dp"
     android:layout_marginLeft="5sp"
     android:layout_marginTop="5sp"
     android:layout_marginRight="5sp"
@@ -17,53 +18,114 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/orderName"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text=" Tên sản phẩm : "
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/orderPhone"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Tên sản phẩm : "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/orderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"
+                />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text=" Số điện thoại : "
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/orderAddress"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Số điện thoại : "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/orderPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingLeft="10dp"
-            android:gravity="center"
-            android:text=" Địa chỉ : "
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/orderDate"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Địa chỉ : "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/orderAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingLeft="10dp"
-            android:gravity="center"
-            android:text=" Ngày đặt hàng : "
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/orderPrice"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Ngày đặt hàng : "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/orderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingLeft="10dp"
-            android:gravity="center"
-            android:text=" Tổng giá tiền : "
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Trạng thái : "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" Tổng giá tiền : "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:text="hhhh"/>
+        </LinearLayout>
 
         <Button
+            android:id="@+id/btn_chi_tiet"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"

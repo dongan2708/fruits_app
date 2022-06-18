@@ -61,7 +61,6 @@ public class OrderHistoryFragment extends Fragment {
         recyclerView.setAdapter(new OrderHistoryAdapter(currentContext, shoppingCart));
 
     }
-
     private void initData() {
         try {
             Response<List<ShoppingCart>> OrderResponse = historyService.getAll().execute();
@@ -75,7 +74,6 @@ public class OrderHistoryFragment extends Fragment {
             Log.e("", e.getMessage());
         }
     }
-
     private void config(){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
