@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">App Fruits</string>
     <string name="title_activity_history">Lịch sử</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Mật khẩu</string>

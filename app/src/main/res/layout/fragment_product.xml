@@ -7,21 +7,18 @@
     tools:context=".fragment.ProductFragment"
     android:paddingTop="0dp">
 
-    <TextView android:id="@+id/list_text"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/shapeListSearchView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Products"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:padding="15dp"/>
+        android:iconifiedByDefault="false"
+        android:queryHint="Shape Name"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_list_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/list_text"
+        android:layout_below="@+id/shapeListSearchView"
         android:layout_marginTop="10dp"
         tools:listitem="@layout/fruits_item" />
 

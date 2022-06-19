@@ -56,7 +56,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
         holder.name.setText(shoppingCart.getShipName());
         holder.price.setText(String.valueOf(shoppingCart.getTotalPrice()));
         holder.date.setText(String.valueOf(shoppingCart.getCreatedAt()));
-//        holder.status.setText(shoppingCart.getStatus());
+        holder.status.setText(String.valueOf(shoppingCart.getStatus()));
         holder.address.setText(shoppingCart.getShipAddress());
         holder.phone.setText(shoppingCart.getShipPhone());
 //        holder.linearLayout.setBackgroundResource(listImage.get(currentImageIndex));
